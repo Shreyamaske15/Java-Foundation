@@ -1,0 +1,10 @@
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        System.out.println("My 1st Java code to print a message");
+    }
+}
+
+
+Output :
+<img width="994" height="255" alt="print message output" src="https://github.com/user-attachments/assets/1332cb90-7726-427f-b285-8be33c12ed01" />
