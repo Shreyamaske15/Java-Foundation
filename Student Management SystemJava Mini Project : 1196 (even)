@@ -1,0 +1,65 @@
+// 1. Student Management System Problem Definition Design a Java program to manage student information using inheritance. 
+Create a base class Person that stores common details like name and age.
+Derive a class Student that includes additional attributes such as roll number and marks. 
+Further extend it into another class GraduateStudent with specialization details. 
+The program should display complete student information using inherited properties.
+ 
+
+class Person {
+    String name;
+    int age;
+
+    void getPersonDetails(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void displayPerson() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Derived class
+class Student extends Person {
+    int rollNo;
+    float marks;
+
+    void getStudentDetails(int r, float m) {
+        rollNo = r;
+        marks = m;
+    }
+
+    void displayStudent() {
+        displayPerson(); // calling parent method
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Marks: " + marks);
+    }
+}
+
+class GraduateStudent extends Student {
+    String specialization;
+
+    void getGraduateDetails(String s) {
+        specialization = s;
+    }
+
+    void displayGraduate() {
+        displayStudent(); // calling parent method
+        System.out.println("Specialization: " + specialization);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        GraduateStudent g = new GraduateStudent();
+
+        g.getPersonDetails("Shreya", 20);
+        g.getStudentDetails(196, 85.5f);
+        g.getGraduateDetails("Computer Science");
+
+        System.out.println("---- Student Details ----");
+        g.displayGraduate();
+    }
+}
